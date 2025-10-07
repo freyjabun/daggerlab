@@ -1,30 +1,36 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { reactive } from 'vue';
+import AdversaryCard from './components/AdversaryCard.vue';
+import AdversaryForm from './components/AdversaryForm.vue';
+
+
+const adversary = reactive({
+  name: 'The Gate Guardian',
+  type: 'Leader (Umbra-Touched)',
+  tier: 1,
+  hp: 8,
+  stress: 3,
+  weapon: {
+  weaponType: 'Curved Blade',
+  range: 'Very Close',
+  roll: '1d10 + 3',
+  damageType: 'Physical'
+}
+,
+  features: [
+    { name: 'Holy Buckler (Passive)', text: 'Once per round, block 1 physical hit.' },
+    { name: 'Sweeping Strike (Action)', text: 'All close enemies take 1d8 physical damage.' }
+  ],
+  description: 'An ancient protector bound to the gate, corrupted by shadow energy.'
+})
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="min-h-screen bg-gray-100 p-8 flex flex-col lg:flex-row gap-8">
+    <AdversaryForm :adversary="adversary" class="lg:w-1/3" />
+    <AdversaryCard :adversary="adversary" class="lg:w-2/3" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
