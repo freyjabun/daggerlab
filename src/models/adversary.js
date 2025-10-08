@@ -12,7 +12,7 @@ export function createEmptyAdversary() {
       weaponType: '',
       range: '',
       roll: '',
-      damageType: 'phy',
+      damageType: '',
       atk: ''
     },
     features: [
@@ -28,7 +28,7 @@ export function createExampleAdversary() {
     name: 'The Gate Guardian',
     type: 'Leader (Umbra-Touched)',
     stats: { tier: 1, hp: 8, stress: 3, difficulty: 13 },
-    weapon: { weaponType: 'Curved Blade', range: 'Very Close', roll: '1d10 + 3', damageType: 'phy' },
+    weapon: { weaponType: 'Curved Blade', range: 'Very Close', roll: '1d10+3', damageType: 'Physical', atk: '+3' },
     features: [
       { name: 'Holy Buckler (Passive)', text: 'Once per round, block 1 physical hit.' },
       { name: 'Sweeping Strike (Action)', text: 'All close enemies take 1d8 physical damage.' }

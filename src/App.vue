@@ -5,7 +5,8 @@ import { createEmptyAdversary, createExampleAdversary } from './models/adversary
 import AdversaryForm from './components/AdversaryForm.vue';
 
 
-const adversary = reactive(createEmptyAdversary())
+const adversary = reactive(createExampleAdversary())
+
 </script>
 
 <template>
