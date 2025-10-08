@@ -1,4 +1,5 @@
 <script setup>
+import Stats from './Stats.vue';
 import WeaponEditor from './WeaponEditor.vue';
 
 defineProps({ adversary: Object })
@@ -10,33 +11,22 @@ defineProps({ adversary: Object })
 
     <!-- Basic Info -->
     <div>
-      <label class="block font-semibold text-gray-700 mb-1">Name</label>
+      <label class="label">Name</label>
       <input v-model="adversary.name" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
     </div>
 
     <div>
-      <label class="block font-semibold text-gray-700 mb-1">Type</label>
+      <label class="label">Type</label>
       <input v-model="adversary.type" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
     </div>
 
-    <div class="grid grid-cols-2 gap-4">
-      <div>
-        <label class="block font-semibold text-gray-700 mb-1">Tier</label>
-        <input type="number" v-model="adversary.tier" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
-      </div>
-      <div>
-        <label class="block font-semibold text-gray-700 mb-1">HP</label>
-        <input type="number" v-model="adversary.hp" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
-      </div>
-    </div>
-
-    <div>
-      <label class="block font-semibold text-gray-700 mb-1">Stress</label>
-      <input type="number" v-model="adversary.stress" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
-    </div>
+    <!-- Stats -->
+     <div class="section-border">
+         <Stats v-model="adversary.stats"></Stats>
+     </div>
 
     <!-- Weapon -->
-    <div class="border border-gray-400">
+    <div class="section-border" >
         <WeaponEditor v-model="adversary.weapon"/>
     </div>
 

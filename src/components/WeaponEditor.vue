@@ -7,25 +7,25 @@ defineEmits(['update:modelValue'])
 
 <template>
   <div class="space-y-3">
-    <h3 class="text-lg font-semibold">Weapon</h3>
+    <h3 class="text-lg font-semibold text-gray-800">Weapon</h3>
 
     <div class="grid grid-cols-2 gap-3">
       <div>
-        <label class="block font-semibold text-gray-700 mb-1">Weapon Type</label>
+        <label class="label">Weapon Type</label>
         <input
           v-model="modelValue.weaponType"
           @input="$emit('update:modelValue', modelValue)"
-          class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded"
+          class="input-field"
         />
       </div>
       
 
       <div>
-        <label class="block font-semibold text-gray-700 mb-1">Range</label>
+        <label class="label">Range</label>
         <select
           v-model="modelValue.range"
           @change="$emit('update:modelValue', modelValue)"
-          class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded"
+          class="input-field"
         >
           <option>Melee</option>
           <option>Very Close</option>
@@ -36,20 +36,20 @@ defineEmits(['update:modelValue'])
       </div>
 
       <div>
-        <label class="block font-semibold text-gray-700 mb-1">Damage</label>
+        <label class="label">Damage</label>
         <input
           v-model="modelValue.roll"
           @input="$emit('update:modelValue', modelValue)"
-          class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded"
+          class="input-field"
         />
       </div>
 
       <div>
-        <label class="block font-semibold text-gray-700 mb-1">Type</label>
+        <label class="label">Type</label>
         <select
           v-model="modelValue.damageType"
           @change="$emit('update:modelValue', modelValue)"
-          class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded"
+          class="input-field"
         >
           <option>Physical</option>
           <option>Magical</option>
@@ -57,11 +57,11 @@ defineEmits(['update:modelValue'])
       </div>
 
       <div>
-        <label class="block font-semibold text-gray-700 mb-1">ATK</label>
+        <label class="label">ATK</label>
         <input
             v-model="modelValue.atk"
             @change="$emit('update:modelValue', modelValue)"
-            class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded"
+            class="input-field"
         />
       </div>
     </div>

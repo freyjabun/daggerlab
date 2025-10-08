@@ -43,7 +43,7 @@ defineProps({ adversary: Object })
             </span>
           </p>
           <p>ATK: {{ adversary.weapon.atk }}</p>
-          <p>Difficulty: 13</p>
+          <p>Difficulty: {{ adversary.stats.difficulty }}</p>
         </div>
 
         <!-- Center Divider -->
@@ -58,7 +58,7 @@ defineProps({ adversary: Object })
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">HP:</span>
             <span
-              v-for="i in adversary.hp"
+              v-for="i in adversary.stats.hp"
               :key="'hp'+i"
               class="inline-block w-4 h-4 border border-gray-600 rounded-full"
             ></span>
@@ -67,7 +67,7 @@ defineProps({ adversary: Object })
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">Stress:</span>
             <span
-              v-for="i in adversary.stress"
+              v-for="i in adversary.stats.stress"
               :key="'stress'+i"
               class="inline-block w-4 h-4 border border-gray-600 rounded-full"
             ></span>

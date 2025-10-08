@@ -1,4 +1,25 @@
+
 @import "tailwindcss";
+@tailwindcss base;
+@tailwind components;
+@tailwind utilities;
+
+
+.input-field{
+  @apply border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded;
+}
+
+.label {
+  @apply block font-semibold text-gray-700 mb-1;
+}
+
+.section {
+  @apply border border-gray-400 rounded p-3;
+}
+
+.section-border{
+  @apply border border-gray-400 rounded p-4
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -79,3 +100,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  /* Hide everything except printable card */
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Make sure printed card fills page nicely */
+  .print-card {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
