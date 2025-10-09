@@ -2,6 +2,7 @@
 import Stats from './Stats.vue';
 import WeaponEditor from './WeaponEditor.vue';
 import FeaturesEditor from './FeaturesEditor.vue';
+import Collapsible from './utilComponents/Collapsible.vue';
 
 defineProps({ adversary: Object })
 </script>
@@ -35,18 +36,20 @@ defineProps({ adversary: Object })
     </div>
 
     <!-- Stats -->
-    <div class="section-border">
-      <Stats v-model="adversary.stats"></Stats>
-    </div>
+    <Collapsible title="Stats">
+      <Stats v-model="adversary.stats" />
+    </Collapsible>
+
 
     <!-- Weapon -->
-    <div class="section-border">
+    <Collapsible title="Weapon">
       <WeaponEditor v-model="adversary.weapon" />
-    </div>
+    </Collapsible>
+
 
     <!-- Description -->
     <div>
-      <label class="block font-semibold text-gray-700 mb-1">Description</label>
+      <label class="block font-semibold text-gray-700 mb-1 text-daggerpurple">Description</label>
       <textarea v-model="adversary.description" class="input-field" rows="3" />
     </div>
 

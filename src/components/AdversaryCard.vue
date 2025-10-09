@@ -6,7 +6,7 @@ defineProps({ adversary: Object })
   <div
     class="bg-white border border-gray-400 rounded shadow-sm max-w-2xl text-gray-800 print:shadow-none print:border-black">
     <!-- Header -->
-    <div class="bg-zinc-500 text-white px-4 py-2 rounded-t text-left">
+    <div class="bg-gradient-to-b from-bone to-bone-dark text-white px-4 py-2 rounded-t text-left">
       <h2 class="font-bold">{{ adversary.name }}</h2>
     </div>
 
@@ -70,7 +70,7 @@ defineProps({ adversary: Object })
       <!-- FEATURES -->
       <div v-if="Array.isArray(adversary.features) && adversary.features.some(f => f.name || f.text)">
         <h2 class="font-bold uppercase text-gray-900 mt-2 text-left">Features</h2>
-        <hr class="border-dotted border-gray-400 mb-2" />
+        <hr class="border-dotted border-gray-400 " />
 
         <template v-for="(feat, i) in adversary.features" :key="i">
           <div v-if="feat.name || feat.text" class="text-left">

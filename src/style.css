@@ -1,9 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
 @import "tailwindcss";
-@tailwindcss base;
-@tailwind components;
-@tailwind utilities;
-
 
 
 .input-field{
@@ -37,6 +33,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@theme{
+  --color-daggerpurple: oklch(0.42 0.28 320);
+  --color-daggerorange: oklch(0.78 0.31 87);
+  --color-arcana: oklch(0.38 0.21 318);
+  --color-grace: oklch(0.56 0.40 353);
+  --color-blade: oklch(0.48 0.33 26);
+  --color-midnight: oklch(0.37 0.02 160);
+  --color-bone: oklch(0.85 0.02 188);
+  --color-sage: oklch(0.37 0.21 156);
+  --color-codex: oklch(0.36 0.19 256);
+  --color-splendor: oklch(0.71 0.34 95);
+  --color-valor: oklch(0.52 0.29 46);
+
+  --color-daggerpurple-dark: oklch(0.33 0.28 320);
+  --color-daggerorange-dark: oklch(0.68 0.31 87);
+  --color-arcana-dark: oklch(0.29 0.21 318);
+  --color-grace-dark: oklch(0.46 0.40 353);
+  --color-blade-dark: oklch(0.39 0.33 26);
+  --color-midnight-dark: oklch(0.27 0.02 160);
+  --color-bone-dark: oklch(0.72 0.02 188);
+  --color-sage-dark: oklch(0.28 0.21 156);
+  --color-codex-dark: oklch(0.27 0.19 256);
+  --color-splendor-dark: oklch(0.61 0.34 95);
+  --color-valor-dark: oklch(0.42 0.29 46);
+
+  --color-daggerpurple-light: oklch(0.52 0.28 320);
+  --color-daggerorange-light: oklch(0.88 0.31 87);
+  --color-arcana-light: oklch(0.48 0.21 318);
+  --color-grace-light: oklch(0.66 0.40 353);
+  --color-blade-light: oklch(0.58 0.33 26);
+  --color-midnight-light: oklch(0.47 0.02 160);
+  --color-bone-light: oklch(0.94 0.02 188);
+  --color-sage-light: oklch(0.47 0.21 156);
+  --color-codex-light: oklch(0.46 0.19 256);
+  --color-splendor-light: oklch(0.81 0.34 95);
+  --color-valor-light: oklch(0.62 0.29 46);
+  --font-dagger: "Overpass", ui-sans-serif, system-ui, sans-serif;
+}
+@layer base {
+  body {
+    font-family: var(--font-dagger);
+    font-weight: 500;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -60,19 +101,11 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  @apply rounded-md border border-gray-300 p-3 text-gray-800 font-semibold bg-gray-50 hover:bg-gray-100
+         cursor-pointer flex justify-between items-center ;
 }
-button:hover {
-  border-color: #646cff;
-}
+
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
