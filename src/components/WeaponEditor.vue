@@ -7,7 +7,6 @@ defineEmits(['update:modelValue'])
 
 <template>
   <div class="space-y-3">
-    <h3 class="text-lg font-semibold text-gray-800">Weapon</h3>
 
     <div class="grid grid-cols-2 gap-3">
       <div>

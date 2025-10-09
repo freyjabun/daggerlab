@@ -2,19 +2,14 @@
 @import "tailwindcss";
 
 
-.input-field{
-  @apply border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded;
-}
 
-.label {
-  @apply block font-semibold text-gray-700 mb-1;
-}
+
 
 .section {
   @apply border border-gray-400 rounded p-3;
 }
 
-.section-border{
+.section-border {
   @apply border border-gray-400 rounded p-4
 }
 
@@ -22,55 +17,61 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@theme{
-  --color-daggerpurple: oklch(0.42 0.28 320);
-  --color-daggerorange: oklch(0.78 0.31 87);
-  --color-arcana: oklch(0.38 0.21 318);
-  --color-grace: oklch(0.56 0.40 353);
-  --color-blade: oklch(0.48 0.33 26);
-  --color-midnight: oklch(0.37 0.02 160);
-  --color-bone: oklch(0.85 0.02 188);
-  --color-sage: oklch(0.37 0.21 156);
-  --color-codex: oklch(0.36 0.19 256);
-  --color-splendor: oklch(0.71 0.34 95);
-  --color-valor: oklch(0.52 0.29 46);
-
-  --color-daggerpurple-dark: oklch(0.33 0.28 320);
-  --color-daggerorange-dark: oklch(0.68 0.31 87);
-  --color-arcana-dark: oklch(0.29 0.21 318);
-  --color-grace-dark: oklch(0.46 0.40 353);
-  --color-blade-dark: oklch(0.39 0.33 26);
-  --color-midnight-dark: oklch(0.27 0.02 160);
-  --color-bone-dark: oklch(0.72 0.02 188);
-  --color-sage-dark: oklch(0.28 0.21 156);
-  --color-codex-dark: oklch(0.27 0.19 256);
-  --color-splendor-dark: oklch(0.61 0.34 95);
-  --color-valor-dark: oklch(0.42 0.29 46);
-
-  --color-daggerpurple-light: oklch(0.52 0.28 320);
-  --color-daggerorange-light: oklch(0.88 0.31 87);
-  --color-arcana-light: oklch(0.48 0.21 318);
-  --color-grace-light: oklch(0.66 0.40 353);
-  --color-blade-light: oklch(0.58 0.33 26);
-  --color-midnight-light: oklch(0.47 0.02 160);
-  --color-bone-light: oklch(0.94 0.02 188);
-  --color-sage-light: oklch(0.47 0.21 156);
-  --color-codex-light: oklch(0.46 0.19 256);
-  --color-splendor-light: oklch(0.81 0.34 95);
-  --color-valor-light: oklch(0.62 0.29 46);
+@theme {
+  
+  /* Default colours */
+  --color-daggerpurple: #6c4f9c;
+  --color-daggerorange: #ff9e3d;
+  --color-arcana: #754b7d;
+  --color-grace: #993468;
+  --color-blade: #792726;
+  --color-midnight: #2e2f2d;
+  --color-bone: #b0b7b5;
+  --color-sage: #18653b;
+  --color-codex: #25446f;
+  --color-splendor: #d0b22f;
+  --color-valor: #c3672e;
+  
+  /* Light colours */
+  --color-daggerpurple-light: #8a6ebf;
+  --color-daggerorange-light: #ffb86b;
+  --color-arcana-light: #946796;
+  --color-grace-light: #b85d8c;
+  --color-blade-light: #a04947;
+  --color-midnight-light: #565755;
+  --color-bone-light: #d3d9d7;
+  --color-sage-light: #3a8b61;
+  --color-codex-light: #46689a;
+  --color-splendor-light: #e6cc5a;
+  --color-valor-light: #dd8a57;
+  
+  /* Dark colours */
+  --color-daggerpurple-dark: #4f3976;
+  --color-daggerorange-dark: #cc7a2b;
+  --color-arcana-dark: #56335a;
+  --color-grace-dark: #6e2350;
+  --color-blade-dark: #541917;
+  --color-midnight-dark: #1a1b1a;
+  --color-bone-dark: #828a88;
+  --color-sage-dark: #11442a;
+  --color-codex-dark: #1a2d4a;
+  --color-splendor-dark: #a38821;
+  --color-valor-dark: #8f441f;
+  
   --font-dagger: "Overpass", ui-sans-serif, system-ui, sans-serif;
 }
+
 @layer base {
   body {
     font-family: var(--font-dagger);
@@ -78,11 +79,19 @@
   }
 }
 
+.input-field {
+  @apply border border-gray-400 bg-gradient-to-r from-bone-light to-bone text-gray-800 p-2 w-full rounded;
+}
+
+.label {
+  @apply block font-semibold text-white mb-1;
+}
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -101,8 +110,7 @@ h1 {
 }
 
 button {
-  @apply rounded-md border border-gray-300 p-3 text-gray-800 font-semibold bg-gray-50 hover:bg-gray-100
-         cursor-pointer flex justify-between items-center ;
+  @apply rounded-md border border-gray-300 p-3 font-semibold cursor-pointer flex justify-between items-center;
 }
 
 
@@ -127,9 +135,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -157,4 +167,3 @@ button:focus-visible {
     height: auto !important;
   }
 }
-
