@@ -1,6 +1,7 @@
 <script setup>
 import Stats from './Stats.vue';
 import WeaponEditor from './WeaponEditor.vue';
+import FeaturesEditor from './FeaturesEditor.vue';
 
 defineProps({ adversary: Object })
 </script>
@@ -12,35 +13,46 @@ defineProps({ adversary: Object })
     <!-- Basic Info -->
     <div>
       <label class="label">Name</label>
-      <input v-model="adversary.name" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
+      <input v-model="adversary.name" class="input-field" />
     </div>
 
     <div>
-      <label class="label">Type</label>
-      <input v-model="adversary.type" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
+      <div>
+        <label class="label">Type</label>
+        <select v-model="adversary.type" class="input-field">
+          <option>Bruiser</option>
+          <option>Horde</option>
+          <option>Leader</option>
+          <option>Minion</option>
+          <option>Ranged</option>
+          <option>Skulk</option>
+          <option>Solo</option>
+          <option>Standard</option>
+          <option>Support</option>
+        </select>
+      </div>
+
     </div>
 
     <!-- Stats -->
-     <div class="section-border">
-         <Stats v-model="adversary.stats"></Stats>
-     </div>
+    <div class="section-border">
+      <Stats v-model="adversary.stats"></Stats>
+    </div>
 
     <!-- Weapon -->
-    <div class="section-border" >
-        <WeaponEditor v-model="adversary.weapon"/>
+    <div class="section-border">
+      <WeaponEditor v-model="adversary.weapon" />
     </div>
 
     <!-- Description -->
     <div>
       <label class="block font-semibold text-gray-700 mb-1">Description</label>
-      <textarea v-model="adversary.description" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" rows="3" />
+      <textarea v-model="adversary.description" class="input-field" rows="3" />
     </div>
 
     <!-- Features -->
-    <h3 class="text-lg font-semibold mt-4">Features</h3>
-    <div v-for="(feat, i) in adversary.features" :key="i" class="space-y-2 border-t border-gray-200 pt-2">
-      <input v-model="feat.name" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" />
-      <textarea v-model="feat.text" class="border border-gray-400 bg-gray-50 text-gray-800 p-2 w-full rounded" rows="2" />
+    <div class="section-border">
+      <FeaturesEditor v-model="adversary.features" />
     </div>
   </div>
 </template>

@@ -4,30 +4,29 @@ defineProps({ adversary: Object })
 
 <template>
   <div
-    class="bg-white border border-gray-400 rounded shadow-sm max-w-2xl text-gray-800 print:shadow-none print:border-black"
-  >
+    class="bg-white border border-gray-400 rounded shadow-sm max-w-2xl text-gray-800 print:shadow-none print:border-black">
     <!-- Header -->
-    <div class="bg-gray-700 text-white px-4 py-2 rounded-t">
-      <h1 class="font-bold text-lg">{{ adversary.name }}</h1>
+    <div class="bg-zinc-500 text-white px-4 py-2 rounded-t">
+      <h2 class="font-bold text-lg">{{ adversary.name }}</h2>
     </div>
 
     <!-- Body -->
     <div class="p-4 space-y-3 text-sm leading-relaxed">
       <!-- Tier + Type -->
       <p class="font-bold">
-        Tier {{ adversary.tier }} {{ adversary.type }}
+        Tier {{ adversary.stats.tier }} {{ adversary.type }}
       </p>
 
       <!-- Description -->
-      <p>
+      <p class="flex gap-1">
         <span class="font-bold">Description:</span>
-        <span class="italic">{{ adversary.description }}</span>
+        <span class="italic ml-1"> {{ adversary.description }}</span>
       </p>
 
       <!-- Motives & Tactics -->
-      <p v-if="adversary.motives">
+      <p class="flex gap-1" v-if="adversary.motives">
         <span class="font-bold">Motives & Tactics:</span>
-        <span class="italic">{{ adversary.motives }}</span>
+        <span class="italic ml-1">{{ adversary.motives }}</span>
       </p>
 
       <!-- Weapon & Thresholds Row -->
@@ -57,35 +56,34 @@ defineProps({ adversary: Object })
 
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">HP:</span>
-            <span
-              v-for="i in adversary.stats.hp"
-              :key="'hp'+i"
-              class="inline-block w-4 h-4 border border-gray-600 rounded-full"
-            ></span>
+            <span v-for="i in adversary.stats.hp" :key="'hp' + i"
+              class="inline-block w-4 h-4 border border-gray-600 rounded-full"></span>
           </p>
 
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">Stress:</span>
-            <span
-              v-for="i in adversary.stats.stress"
-              :key="'stress'+i"
-              class="inline-block w-4 h-4 border border-gray-600 rounded-full"
-            ></span>
+            <span v-for="i in adversary.stats.stress" :key="'stress' + i"
+              class="inline-block w-4 h-4 border border-gray-600 rounded-full"></span>
           </p>
         </div>
       </div>
-
       <!-- FEATURES -->
-      <div>
+      <div v-if="Array.isArray(adversary.features) && adversary.features.some(f => f.name || f.text)">
         <h2 class="font-bold uppercase text-gray-900 mt-2">Features</h2>
         <hr class="border-dotted border-gray-400 mb-2" />
-        <div v-for="(feat, i) in adversary.features" :key="i" class="mb-2">
-          <p>
-            <span class="font-bold italic">{{ feat.name }}:</span>
-            {{ feat.text }}
-          </p>
-        </div>
+
+        <template v-for="(feat, i) in adversary.features" :key="i">
+          <div v-if="feat.name || feat.text" class="mb-2">
+            <p>
+              <span class="font-bold italic">{{ feat.name }}:</span>
+              {{ feat.text }}
+            </p>
+          </div>
+        </template>
       </div>
+
+
+
     </div>
   </div>
 </template>

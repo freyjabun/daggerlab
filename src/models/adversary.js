@@ -2,6 +2,7 @@ export function createEmptyAdversary() {
   return {
     name: '',
     type: '',
+    motives: '',
     stats: {
       tier: '',
       hp: '',
@@ -25,14 +26,15 @@ export function createEmptyAdversary() {
 
 export function createExampleAdversary() {
   return {
-    name: 'The Gate Guardian',
-    type: 'Leader (Umbra-Touched)',
+    name: 'Big Evil Creature',
+    type: 'Leader',
+    motives: 'Go nuts, go crazy',
     stats: { tier: 1, hp: 8, stress: 3, difficulty: 13 },
-    weapon: { weaponType: 'Curved Blade', range: 'Very Close', roll: '1d10+3', damageType: 'Physical', atk: '+3' },
+    weapon: { weaponType: 'Evil Sword', range: 'Melee', roll: '1d10+3', damageType: 'Physical', atk: '+3' },
     features: [
-      { name: 'Holy Buckler (Passive)', text: 'Once per round, block 1 physical hit.' },
-      { name: 'Sweeping Strike (Action)', text: 'All close enemies take 1d8 physical damage.' }
+      { name: 'Example Feature (Passive)', text: 'Once per round, block 1 physical hit.' },
+      { name: 'Sweeping Strike (Action)', text: 'Spend a Fear. All enemies within Close range take 1d8 physical damage.' }
     ],
-    description: 'An ancient protector bound to the gate, corrupted by shadow energy.'
+    description: 'A big ol guy. He\'s evil, soo so evil'
   }
 }
