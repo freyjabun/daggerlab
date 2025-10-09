@@ -29,7 +29,7 @@ function removeFeature(index) {
     <div
       v-for="(feat, i) in modelValue"
       :key="i"
-      class="border-t border-gray-200 pt-2 space-y-2"
+      class="border-t border-gray-200 space-y-2"
     >
       <input
         v-model="feat.name"

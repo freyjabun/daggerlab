@@ -7,7 +7,9 @@ export function createEmptyAdversary() {
       tier: '',
       hp: '',
       stress: '',
-      difficulty: ''
+      difficulty: '',
+      thresholdMinor: '',
+      thresholdMajor: ''
     },
     weapon: {
       weaponType: '',
@@ -29,7 +31,7 @@ export function createExampleAdversary() {
     name: 'Big Evil Creature',
     type: 'Leader',
     motives: 'Go nuts, go crazy',
-    stats: { tier: 1, hp: 8, stress: 3, difficulty: 13 },
+    stats: { tier: 1, hp: 8, stress: 3, difficulty: 13, thresholdMinor: 6, thresholdMajor: 13},
     weapon: { weaponType: 'Evil Sword', range: 'Melee', roll: '1d10+3', damageType: 'Physical', atk: '+3' },
     features: [
       { name: 'Example Feature (Passive)', text: 'Once per round, block 1 physical hit.' },
