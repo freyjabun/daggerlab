@@ -3,10 +3,10 @@ import { ref } from 'vue';
 
 const props = defineProps({
   title: { type: String, required: true },
-  initiallyOpen: { type: Boolean, default: true }
+  initiallyClosed: { type: Boolean, default: false }
 });
 
-const isOpen = ref(props.initiallyOpen);
+const isOpen = ref(props.initiallyClosed);
 const toggle = () => {
   isOpen.value = !isOpen.value;
 };
@@ -16,7 +16,7 @@ const toggle = () => {
   <div>
 <button
   class="w-full text-left font-semibold flex justify-between items-center p-3 rounded focus:outline-none
-          border border-gray-300 appearance-none bg-gradient-to-r from-bone to-bone-dark text-gray-800"
+          border border-gray-300 appearance-none bg-gradient-to-r from-bone-light to-bone text-gray-800"
   @click="toggle"
 >
   {{ title }}
@@ -26,7 +26,7 @@ const toggle = () => {
 
 
 
-    <div v-show="isOpen" :class="['bg-radial from-daggerpurple-light from-daggerpurple to-daggerpurple-dark','rounded-lg p-3', isOpen ? 'border border-gray-300' : '']">
+    <div v-show="isOpen" :class="['bg-radial from-daggerpurple-dark from-daggerpurple to-daggerpurple-light','rounded-lg p-3', isOpen ? 'border border-gray-300' : '']">
       <slot />
     </div>
   </div>

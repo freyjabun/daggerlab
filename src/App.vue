@@ -7,7 +7,7 @@ const adversary = reactive(createExampleAdversary())
 </script>
 <template>
   <div
-    class="min-h-screen bg-gray-100 flex flex-col lg:flex-row items-start justify-center gap-8 p-8 print:bg-white print:block">
+    class="min-h-screen bg-codex-dark flex flex-col lg:flex-row items-start justify-center gap-8 p-8 print:bg-white print:block">
     <!-- Left: Form -->
     <div class="w-[400px] flex-shrink-0 print:hidden">
       <AdversaryForm :adversary="adversary" />

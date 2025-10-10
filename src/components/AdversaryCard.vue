@@ -6,7 +6,7 @@ defineProps({ adversary: Object })
   <div
     class="bg-white border border-gray-400 rounded shadow-sm max-w-2xl text-gray-800 print:shadow-none print:border-black">
     <!-- Header -->
-    <div class="bg-gradient-to-b from-bone to-bone-dark text-white px-4 py-2 rounded-t text-left">
+    <div class="bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-4 py-2 rounded-t text-left">
       <h2 class="font-bold">{{ adversary.name }}</h2>
     </div>
 
