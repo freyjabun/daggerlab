@@ -3,16 +3,6 @@
 
 
 
-
-
-.section {
-  @apply border border-gray-400 rounded p-3;
-}
-
-.section-border {
-  @apply border border-gray-400 rounded p-4
-}
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,6 +58,8 @@
   --color-codex-dark: #1a2d4a;
   --color-splendor-dark: #a38821;
   --color-valor-dark: #8f441f;
+
+  --color-sitebg: #fbf9f3;
   
   --font-dagger: "Overpass", ui-sans-serif, system-ui, sans-serif;
 }
@@ -90,6 +82,7 @@
 .label-white {
   @apply text-white block font-semibold mb-1
 }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -114,8 +107,9 @@ h1 {
 }
 
 button {
-  @apply rounded-md border border-gray-300 p-3 font-semibold cursor-pointer flex justify-between items-center;
+  @apply rounded-md border border-gray-400 p-2 font-semibold cursor-pointer flex justify-between items-center;
 }
+
 
 
 button:focus,

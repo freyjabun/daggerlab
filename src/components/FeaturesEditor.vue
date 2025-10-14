@@ -23,14 +23,22 @@ function removeFeature(index) {
 
 <template>
   <div class="space-y-2">
-    <h3 class="text-lg font-semibold mt-4 text-gray-800">Features</h3>
 
     <!-- Existing features -->
+            <!-- Add new feature -->
+    <button
+      @click="addFeature"
+      type="button"
+      class="text-sm text-white px-3 py-1 rounded  bg-gradient-to-r from-sage to-sage-dark hover:bg-blue-700"
+    >
+      + Add Feature
+    </button>
     <div
       v-for="(feat, i) in modelValue"
       :key="i"
-      class="border-t border-gray-200 space-y-2"
+      class="space-y-2"
     >
+    <label>Feature {{ i+1 }}</label>
       <input
         v-model="feat.name"
         class="input-field"
@@ -44,22 +52,16 @@ function removeFeature(index) {
       ></textarea>
 
       <button
-        v-if="modelValue.length > 1"
+        v-if="modelValue.length"
         @click="removeFeature(i)"
         type="button"
         class="text-sm hover:underline bg-gradient-to-r from-blade to-blade-dark"
       >
         Remove Feature
       </button>
+
     </div>
 
-    <!-- Add new feature -->
-    <button
-      @click="addFeature"
-      type="button"
-      class="mt-2 text-sm bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 bg-gradient-to-r from-sage to-sage-dark"
-    >
-      + Add Feature
-    </button>
+   
   </div>
 </template>

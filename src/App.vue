@@ -13,7 +13,7 @@ const adversary = reactive(createExampleAdversary())
       <AdversaryForm :adversary="adversary" />
     </div> <!-- Right: Card -->
     <div
-      class="w-[600px] flex-shrink-0 bg-white rounded-xl shadow-xl border border-gray-300 overflow-hidden h-[800px] p-6 print:shadow-none print:border-none print:w-full print:h-auto print:p-0">
+      class="w-[600px] flex-shrink-0 bg-sitebg rounded-xl shadow-xl border border-gray-300 overflow-hidden h-[800px] p-6 print:shadow-none print:border-none print:w-full print:h-auto print:p-0">
       <AdversaryCard :adversary="adversary" />
     </div>
   </div>

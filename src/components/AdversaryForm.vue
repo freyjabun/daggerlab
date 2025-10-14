@@ -8,7 +8,7 @@ defineProps({ adversary: Object })
 </script>
 
 <template>
-  <div class="bg-white p-6 rounded-2xl shadow-md space-y-5 border border-gray-300">
+  <div class="bg-sitebg p-6 rounded-2xl shadow-md space-y-5 border border-gray-300">
     <h2 class="text-2xl font-bold text-gray-800 mb-2">Adversary Editor</h2>
 
     <!-- Basic Info -->
@@ -54,8 +54,8 @@ defineProps({ adversary: Object })
     </div>
 
     <!-- Features -->
-    <div class="section-border">
-      <FeaturesEditor v-model="adversary.features" />
+     <Collapsible title="Features">
+      <FeaturesEditor v-model="adversary.features"></FeaturesEditor>
+    </Collapsible>
     </div>
-  </div>
 </template>
