@@ -6,33 +6,33 @@ defineProps({ adversary: Object })
   <div
     class="bg-white border border-gray-400 rounded shadow-sm max-w-2xl text-gray-800 print:shadow-none print:border-black">
     <!-- Header -->
-    <div class="bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-4 py-2 rounded-t text-left">
-      <h2 class="font-bold">{{ adversary.name }}</h2>
+    <div class="bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 rounded-t text-left">
+      <h2 class="font-bold">{{ adversary.baseInfo.name}}</h2>
     </div>
 
     <!-- Body -->
-    <div class="p-4 text-sm leading-relaxed">
+    <div class="p-2 text-sm leading-relaxed">
       <!-- Tier + Type -->
       <p class="font-bold text-left">
-        Tier {{ adversary.stats.tier }} {{ adversary.type }}
+        Tier {{ adversary.stats.tier}} {{ adversary.baseInfo.type}}
       </p>
 
       <!-- Description -->
       <p class="flex">
         <span class="font-bold">Description:</span>
-        <span class="italic ml-1"> {{ adversary.description }}</span>
+        <span class="italic ml-1"> {{ adversary.baseInfo.description }}</span>
       </p>
 
       <!-- Motives & Tactics -->
-      <p class="flex pb-2" v-if="adversary.motives">
+      <p class="flex pb-2">
         <span class="font-bold">Motives & Tactics:</span>
-        <span class="italic ml-1">{{ adversary.motives }}</span>
+        <span class="italic ml-1">{{ adversary.baseInfo.motives }}</span>
       </p>
 
       <!-- Weapon & Thresholds Row -->
       <div class="grid sm:grid-cols-2">
         <!-- Left: Weapon Info -->
-        <div class="text-left border-r border-gray-400" >
+        <div class="text-left border-r-2 border-gray-500" >
           <p>
             {{ adversary.weapon.weaponType }}:
             {{ adversary.weapon.range }} —
@@ -46,7 +46,7 @@ defineProps({ adversary: Object })
         </div>
 
         <!-- Right: Thresholds, HP & Stress -->
-        <div class="pl-2 text-left">
+        <div class="pl-2 text-left border-gray-400">
           <p>
             <span class="font-semibold">Thresholds:</span>
             {{ adversary.stats.thresholdMinor }} / {{ adversary.stats.thresholdMajor }}
@@ -69,8 +69,8 @@ defineProps({ adversary: Object })
 
       <!-- FEATURES -->
       <div v-if="Array.isArray(adversary.features) && adversary.features.some(f => f.name || f.text)">
-        <h2 class="font-bold uppercase text-gray-900 mt-2 text-left">Features</h2>
-        <hr class="border-dotted border-gray-400 " />
+        <h2 class="card-header  mt-2 text-left">Features</h2>
+        <hr class="border-dotted border-gray-500 " />
 
         <template v-for="(feat, i) in adversary.features" :key="i">
           <div v-if="feat.name || feat.text" class="text-left">

@@ -10,8 +10,9 @@ defineEmits(['update:modelValue'])
 
     <div class="grid grid-cols-2 gap-3">
       <div>
-        <label>Weapon Type</label>
+        <label>Weapon</label>
         <input
+        placeholder="Cool Axe"
           v-model="modelValue.weaponType"
           @input="$emit('update:modelValue', modelValue)"
           class="input-field"
@@ -37,6 +38,7 @@ defineEmits(['update:modelValue'])
       <div>
         <label>Damage</label>
         <input
+        placeholder="1d6 + 4"
           v-model="modelValue.roll"
           @input="$emit('update:modelValue', modelValue)"
           class="input-field"
@@ -58,6 +60,7 @@ defineEmits(['update:modelValue'])
       <div>
         <label>ATK</label>
         <input
+        placeholder="+2"
             v-model="modelValue.atk"
             @change="$emit('update:modelValue', modelValue)"
             class="input-field"

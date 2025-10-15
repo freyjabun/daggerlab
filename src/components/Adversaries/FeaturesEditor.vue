@@ -25,7 +25,26 @@ function removeFeature(index) {
   <div class="space-y-2">
 
     <!-- Existing features -->
-            <!-- Add new feature -->
+
+    <div
+      v-for="(feat, i) in modelValue"
+      :key="i"
+      class="space-y-2"
+    >
+      <input
+      placeholder="Feature name"
+        v-model="feat.name"
+        class="input-field"
+        @input="$emit('update:modelValue', modelValue)"
+      />
+      <textarea
+      placeholder="Feature description"
+        v-model="feat.text"
+        class="input-field"
+        rows="2"
+        @input="$emit('update:modelValue', modelValue)"
+      ></textarea>
+                  <!-- Add new feature -->
     <button
       @click="addFeature"
       type="button"
@@ -33,23 +52,6 @@ function removeFeature(index) {
     >
       + Add Feature
     </button>
-    <div
-      v-for="(feat, i) in modelValue"
-      :key="i"
-      class="space-y-2"
-    >
-    <label>Feature {{ i+1 }}</label>
-      <input
-        v-model="feat.name"
-        class="input-field"
-        @input="$emit('update:modelValue', modelValue)"
-      />
-      <textarea
-        v-model="feat.text"
-        class="input-field"
-        rows="2"
-        @input="$emit('update:modelValue', modelValue)"
-      ></textarea>
 
       <button
         v-if="modelValue.length"
