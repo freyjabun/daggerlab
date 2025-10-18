@@ -14,9 +14,6 @@ defineProps({ adversary: Object })
 
     <BaseInfo v-model="adversary.baseInfo"></BaseInfo>
 
-
-
-
     <!-- Stats -->
     <Collapsible title="Stats">
       <Stats v-model="adversary.stats" />

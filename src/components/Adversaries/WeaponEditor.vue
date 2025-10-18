@@ -56,16 +56,6 @@ defineEmits(['update:modelValue'])
           <option>Magical</option>
         </select>
       </div>
-
-      <div>
-        <label>ATK</label>
-        <input
-        placeholder="+2"
-            v-model="modelValue.atk"
-            @change="$emit('update:modelValue', modelValue)"
-            class="input-field"
-        />
-      </div>
     </div>
   </div>
 </template>
