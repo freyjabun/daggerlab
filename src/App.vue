@@ -1,8 +1,12 @@
 <script setup>
 import { reactive } from 'vue';
-import AdversaryCard from './components/AdversaryCard.vue';
+import AdversaryCard from './components/Adversaries/AdversaryCard.vue';
+import AdversaryForm from './components/Adversaries/AdversaryForm.vue';
+import EnvironmentCard from './components/Environments/EnvironmentCard.vue';
+import EnvironmentForm from './components/Environments/EnvironmentForm.vue';
 import { createEmptyAdversary, createExampleAdversary } from './models/adversary';
-import AdversaryForm from './components/AdversaryForm.vue';
+import { createEmptyEnvironment } from './models/environment';
+
 const adversary = reactive(createExampleAdversary()) 
 </script>
 <template>

@@ -31,9 +31,9 @@ defineEmits(['update:modelValue'])
         <input placeholder="Kill murder kill" v-model="modelValue.motives" @input="$emit('update:modelValue', modelValue)" class="input-field"></input>
     </div>
 
-    <div>
-      <label class="label">Description</label>
-      <input placeholder="Big stinky guy who is both big and stinky" v-model="modelValue.description" @input="$emit('update:modelValue', modelValue)" class="input-field"></input>
-    </div>
-</div>
+  </div>
+  <div>
+    <label class="label">Description</label>
+    <textarea placeholder="Big stinky guy who is both big and stinky" v-model="modelValue.description" @input="$emit('update:modelValue', modelValue)" class="input-field"></textarea>
+  </div>
 </template>

@@ -19,8 +19,7 @@ defineProps({ adversary: Object })
 
       <!-- Description -->
       <p class="flex">
-        <span class="font-bold">Description:</span>
-        <span class="italic ml-1"> {{ adversary.baseInfo.description }}</span>
+        <span class="italic"> {{ adversary.baseInfo.description }}</span>
       </p>
 
       <!-- Motives & Tactics -->
