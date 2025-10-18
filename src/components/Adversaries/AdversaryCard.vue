@@ -14,7 +14,7 @@ defineProps({ adversary: Object })
     <div class="p-2 text-sm leading-relaxed">
       <!-- Tier + Type -->
       <p class="font-bold text-left">
-        Tier {{ adversary.stats.tier}} {{ adversary.baseInfo.type}}
+        Tier {{ adversary.baseInfo.tier}} {{ adversary.baseInfo.type}}
       </p>
 
       <!-- Description -->

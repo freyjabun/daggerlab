@@ -117,6 +117,10 @@
   @apply border border-gray-700 bg-gradient-to-r from-codex to-codex-light text-white p-2 w-full rounded;
 }
 
+.input-field-dark {
+  @apply border border-gray-800 bg-gradient-to-r from-codex-dark to-codex text-white p-2 w-full rounded;
+}
+
 .label {
   @apply block font-semibold text-white mb-1;
 }
