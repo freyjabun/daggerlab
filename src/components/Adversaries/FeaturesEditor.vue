@@ -5,10 +5,18 @@ const props = defineProps({
   modelValue: {
     type: Array,
     required: true
+  },
+  index: {
+    type: Number
   }
 })
 
 const emit = defineEmits(['update:modelValue'])
+
+function emitIndex(i) {
+  props.index = i
+  emit('update:index', props.index)
+}
 
 function addFeature() {
   props.modelValue.push({ name: '', text: '' })
@@ -32,24 +40,24 @@ function removeFeature(index) {
           @input="$emit('update:modelValue', modelValue)"></textarea>
       </div>
 
+      <div class="flex mt-1 mb-5">
+        <!-- TODO: CANT ACCESS {i} BECAUSE IT'S NOT IN THE SAME DIV WHERE IT IS DEFINED, HOW DO I ACCESS THIS VALUE? ADD V-IF FOR IT-->
+        <button @click="addFeature" type="button" v-if="i === modelValue.length -1"
+          class="text-sm text-white px-3 py-1 rounded  bg-gradient-to-r from-sage to-sage-dark hover:bg-blue-700 mr-auto">
+          + Add Feature
+        </button>
 
+        <!-- SAME SHIT HERE I FEAR -->
+        <button v-if="modelValue.length" @click="removeFeature(i)" type="button"
+          class="text-sm hover:underline bg-gradient-to-r from-blade to-blade-dark ml-auto">
+          Remove Feature
+        </button>
 
-    </div>
-
-    <div class="flex mt-1 mb-5">
-      <!-- TODO: CANT ACCESS {i} BECAUSE IT'S NOT IN THE SAME DIV WHERE IT IS DEFINED, HOW DO I ACCESS THIS VALUE? ADD V-IF FOR IT-->
-      <button @click="addFeature" type="button"
-        class="text-sm text-white px-3 py-1 rounded  bg-gradient-to-r from-sage to-sage-dark hover:bg-blue-700 mr-auto">
-        + Add Feature
-      </button>
-      
-      <!-- SAME SHIT HERE I FEAR -->
-      <button v-if="modelValue.length" @click="removeFeature(i)" type="button"
-        class="text-sm hover:underline bg-gradient-to-r from-blade to-blade-dark ml-auto">
-        Remove Feature
-      </button>
+      </div>
 
     </div>
+
+
 
 
   </div>
