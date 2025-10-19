@@ -5,7 +5,12 @@ import FeaturesEditor from './FeaturesEditor.vue';
 import Collapsible from '../utilComponents/Collapsible.vue';
 import BaseInfo from './BaseInfo.vue';
 
-defineProps({ adversary: Object })
+
+const emit = defineEmits(['remove', 'add'])
+defineProps({
+  adversary: Object,
+  showAdd: Boolean
+})
 </script>
 
 <template>
@@ -27,8 +32,18 @@ defineProps({ adversary: Object })
 
 
     <!-- Features -->
-     <Collapsible title="Features">
+    <Collapsible title="Features">
       <FeaturesEditor v-model="adversary.features"></FeaturesEditor>
     </Collapsible>
+
+    <div class="flex mt-2">
+      <button v-if="showAdd" @click="$emit('add')"
+        class="leading-none bg-sage text-white px-4 py-2 rounded mr-auto">
+        Add Adversary
+      </button>
+      <button @click="$emit('remove')" class="leading-none bg-blade text-white px-4 py-2 rounded ml-auto">
+        Remove
+      </button>
     </div>
+  </div>
 </template>

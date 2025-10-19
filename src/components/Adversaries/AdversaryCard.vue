@@ -40,7 +40,7 @@ defineProps({ adversary: Object })
               ({{ adversary.weapon.damageType === 'Physical' ? 'phy' : 'mag' }})
             </span>
           </p>
-          <p>ATK: {{ adversary.weapon.atk }}</p>
+          <p>ATK: {{ adversary.stats.atk }}</p>
           <p>Difficulty: {{ adversary.stats.difficulty }}</p>
         </div>
 

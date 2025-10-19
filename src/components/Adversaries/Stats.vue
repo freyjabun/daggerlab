@@ -28,7 +28,7 @@ defineEmits(['update:modelValue'])
             </div>
             <div>
                 <label>Attack Bonus</label>
-                <input placeholder="3" v-model.number="modelValue.atk" @input="$emit('update:modelValue', modelValue)"
+                <input placeholder="+3" v-model="modelValue.atk" @input="$emit('update:modelValue', modelValue)"
                     class="input-field" />
             </div>
 
