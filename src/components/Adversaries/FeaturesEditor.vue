@@ -41,7 +41,7 @@ function removeFeature(index) {
       </div>
 
       <div class="flex mt-1 mb-5">
-        <!-- TODO: CANT ACCESS {i} BECAUSE IT'S NOT IN THE SAME DIV WHERE IT IS DEFINED, HOW DO I ACCESS THIS VALUE? ADD V-IF FOR IT-->
+        <!-- TODO: CANT ACCESS {i} IF IT'S NOT IN THE SAME DIV WHERE IT IS DEFINED, HOW DO I ACCESS THIS VALUE? ADD V-IF FOR IT-->
         <button @click="addFeature" type="button" v-if="i === modelValue.length -1"
           class="text-sm text-white px-3 py-1 rounded  bg-gradient-to-r from-sage to-sage-dark hover:bg-blue-700 mr-auto">
           + Add Feature
