@@ -42,7 +42,8 @@ function removeFeature(index) {
         class="text-sm text-white px-3 py-1 rounded  bg-gradient-to-r from-sage to-sage-dark hover:bg-blue-700 mr-auto">
         + Add Feature
       </button>
-
+      
+      <!-- SAME SHIT HERE I FEAR -->
       <button v-if="modelValue.length" @click="removeFeature(i)" type="button"
         class="text-sm hover:underline bg-gradient-to-r from-blade to-blade-dark ml-auto">
         Remove Feature
