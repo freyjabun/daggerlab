@@ -1,0 +1,23 @@
+name: My Epic Action
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  publish_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build My Thang
+        run: |
+          docker build . -t freyjaistaken/daggerlab:latest
+      - name: Publish My Thang
+        run: |
+          docker login -u freyjaistaken -p ${{ secrets.dockerhubPass }}
+          docker push freyjaistaken/daggerlab:latest
+      
+    
