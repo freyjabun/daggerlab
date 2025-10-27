@@ -18,15 +18,16 @@ defineProps({ adversary: Object })
       </p>
 
       <!-- Description -->
-      <p class="flex">
+      <p class="flex text-left">
         <span class="italic"> {{ adversary.baseInfo.description }}</span>
       </p>
 
       <!-- Motives & Tactics -->
-      <p class="flex pb-2">
+      <div class="text-left">
         <span class="font-bold">Motives & Tactics:</span>
         <span class="italic ml-1">{{ adversary.baseInfo.motives }}</span>
-      </p>
+      </div>
+      <div class=" mt-1 border-b-2 border-gray-500 mb-1" ></div>
 
       <!-- Weapon & Thresholds Row -->
       <div class="grid sm:grid-cols-2">
@@ -85,11 +86,4 @@ defineProps({ adversary: Object })
   </div>
 </template>
 
-<style scoped>
-@media print {
-  body {
-    background: white !important;
-    -webkit-print-color-adjust: exact;
-  }
-}
-</style>
+

@@ -204,22 +204,19 @@ button:focus-visible {
 @media print {
   @page {
     margin: 1cm;
+    box-shadow: none !important;
+    width: 600px !important;
+    overflow-y: auto;
   }
 
   body {
     background: white !important;
   }
 
-  /* Hide everything except printable card */
-  .print-hidden {
-    display: none !important;
-  }
 
-  /* Make sure printed card fills page nicely */
   .print-card {
-    box-shadow: none !important;
-    border: none !important;
-    width: 100% !important;
+    width: 500px !important;
     height: auto !important;
+    overflow-y: auto !important
   }
 }
