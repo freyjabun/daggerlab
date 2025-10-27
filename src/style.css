@@ -217,6 +217,7 @@ button:focus-visible {
   .print-card {
     width: 500px !important;
     height: auto !important;
-    overflow-y: auto !important
+    padding: 0 !important;
+    overflow-y: auto !important;
   }
 }

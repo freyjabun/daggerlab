@@ -31,8 +31,7 @@ const removeAdversary = (i) => {
           />
         </div>
 
-        <div class="w-[600px] flex-shrink-0 bg-sitebg rounded-xl shadow-xl border border-gray-300 overflow-y-auto p-6
-                 print:shadow-none print:border-none print:w-full print:h-auto print:p-0 print-card">
+        <div class="w-[600px] bg-sitebg p-6 print-card rounded">
           <AdversaryCard :adversary="adv" />
         </div>
 
