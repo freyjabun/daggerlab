@@ -17,7 +17,7 @@ jobs:
           docker build . -t freyjaistaken/daggerlab:latest
       - name: Publish My Thang
         run: |
-          docker login -u freyjaistaken --password-stdin ${{ secrets.dockerhubPass }}
+          docker login -u freyjaistaken -p ${{ secrets.dockerhubPass }}
           docker push freyjaistaken/daggerlab:latest
       
     
