@@ -9,7 +9,8 @@ import BaseInfo from './BaseInfo.vue';
 const emit = defineEmits(['remove', 'add'])
 defineProps({
   adversary: Object,
-  showAdd: Boolean
+  showAdd: Boolean,
+  showRemove: Boolean
 })
 </script>
 
@@ -41,7 +42,7 @@ defineProps({
         class="leading-none bg-sage text-white px-4 py-2 rounded mr-auto">
         Add Adversary
       </button>
-      <button @click="$emit('remove')" class="leading-none bg-blade text-white px-4 py-2 rounded ml-auto">
+      <button v-if="showRemove" @click="$emit('remove')" class="leading-none bg-blade text-white px-4 py-2 rounded ml-auto">
         Remove
       </button>
     </div>

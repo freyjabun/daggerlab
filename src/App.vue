@@ -26,12 +26,13 @@ const removeAdversary = (i) => {
         <div class="w-[400px] flex-shrink-0 print:hidden">
           <AdversaryForm :adversary="adv"
           @remove="removeAdversary(i)"
+          :show-remove="i !== 0"
           @add="addAdversary()"
           :show-add="i === adversaries.length - 1" 
           />
         </div>
 
-        <div class="w-[600px] bg-sitebg p-6 print-card rounded">
+        <div class="w-[600px] bg-sitebg p-6 print-card">
           <AdversaryCard :adversary="adv" />
         </div>
 
