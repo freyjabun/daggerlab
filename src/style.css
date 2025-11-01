@@ -166,9 +166,6 @@ button {
   @apply bg-gradient-to-r from-codex to-codex-light
 }
 
-button:hover{
-  @apply bg-gradient-to-r from-codex to-codex-light
-}
 
 
 

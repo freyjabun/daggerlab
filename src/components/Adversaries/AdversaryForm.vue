@@ -37,12 +37,12 @@ defineProps({
     </Collapsible>
 
   </div>
-  <div class="flex mt-2 ml-2 mr-2">
+  <div class="flex mt-2 ml-1 mr-1">
     <button v-if="showAdd" @click="$emit('add')"
-      class="leading-none bg-sage text-white px-4 py-2 rounded mr-auto">
+      class="leading-none bg-sage text-white px-4 py-2 rounded mr-auto hover:bg-sage-light">
       Add Adversary
     </button>
-    <button v-if="showRemove" @click="$emit('remove')" class="leading-none bg-blade text-white px-4 py-2 rounded ml-auto">
+    <button v-if="showRemove" @click="$emit('remove')" class="leading-none bg-blade text-white px-4 py-2 rounded ml-auto hover:bg-blade-light">
       Remove
     </button>
   </div>

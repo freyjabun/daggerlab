@@ -18,12 +18,12 @@ const removeAdversary = (i) => {
 </script>
 
 <template>
-  <div class="bg-codex-dark p-8 space-y-8 print:bg-white print:block">
+  <div class="print:bg-white print:block">
 
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-4">
       <div v-for="(adv, i) in adversaries" :key="i" class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <div class="w-[400px] flex-shrink-0 print:hidden">
+        <div class="w-[450px] flex-shrink-0 print:hidden">
           <AdversaryForm :adversary="adv"
           @remove="removeAdversary(i)"
           :show-remove="i !== 0"
