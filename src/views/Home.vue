@@ -19,7 +19,7 @@
   <!-- Adversaries button -->
   <RouterLink
     to="/adversaries"
-    class="px-6 py-3 bg-daggerpurple hover:bg-blue-700 rounded-lg text-white font-semibold transition"
+    class="px-6 py-3 bg-daggerpurple hover:bg-daggerpurple-dark rounded-lg text-white font-semibold transition"
     >
     Create Adversaries
   </RouterLink>
