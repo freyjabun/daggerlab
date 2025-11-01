@@ -40,4 +40,9 @@ defineEmits(['update:modelValue'])
     <label class="label">Description</label>
     <textarea placeholder="Big stinky guy who is both big and stinky" v-model="modelValue.description" @input="$emit('update:modelValue', modelValue)" class="input-field-dark"></textarea>
   </div>
+  
+  <div>
+    <label class="label">Experience</label>
+    <textarea class="input-field-dark" placeholder="Big Strong +2 (Leave empty for no experience)" v-model="modelValue.experience" @input="$emit('update:modelValue', modelValue)"></textarea>
+  </div>
 </template>

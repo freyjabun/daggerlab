@@ -28,8 +28,13 @@ defineProps({ adversary: Object })
         <span class="font-bold">Motives & Tactics:</span>
         <span class="italic ml-1">{{ adversary.baseInfo.motives }}</span>
       </div>
+      
+      <div v-if="adversary.baseInfo.experience" class="text-left">
+        <span class="font-bold"> Experience:</span>
+        <span class="italic ml-1">{{ adversary.baseInfo.experience}}</span>
+      </div>
+      
       <div class=" mt-1 border-b-2 border-gray-500 mb-1" ></div>
-
       <!-- Weapon & Thresholds Row -->
       <div class="grid sm:grid-cols-2">
         <!-- Left: Weapon Info -->

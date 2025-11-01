@@ -5,7 +5,8 @@ export function createEmptyAdversary() {
     type: '',
     motives: '',
     tier: '',
-    description: ''
+    description: '',
+    experience: ''
     },
     stats: {
       tier: '',
@@ -36,7 +37,8 @@ export function createExampleAdversary() {
     type: 'Leader',
     motives: 'Go nuts, go crazy',
     tier: 1,
-    description: 'A big ol guy. He\'s evil, soo so evil'
+    description: 'A big ol guy. He\'s evil, soo so evil',
+    experience: ''
     },
     stats: { hp: 8, stress: 3, difficulty: 13, thresholdMinor: 6, thresholdMajor: 13, atk:'+3'},
     weapon: { weaponType: 'Evil Sword', range: 'Melee', roll: '1d10+3', damageType: 'Physical' },
