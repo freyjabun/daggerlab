@@ -31,7 +31,7 @@ const printAll = () => {
           />
         </div>
 
-        <div class="w-[600px] bg-sitebg p-6 print-card">
+        <div class="w-xl bg-sitebg p-6 print-card">
           <AdversaryCard :adversary="adv" />
         </div>
 
