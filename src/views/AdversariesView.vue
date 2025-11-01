@@ -11,17 +11,13 @@ const adversaries = reactive([
   createExampleAdversary(),
 ])
 
-const addAdversary = () => {
-  adversaries.push(createEmptyAdversary())
-}
-
-const removeAdversary = (i) => {
-  adversaries.splice(i, 1)
+const printAll = () => {
+  window.open('/printAdversaries', '_blank')
 }
 </script>
 
 <template>
-  <div class="print:bg-white print:block">
+<button @click="printAll" class="button">Print Adversaries</button>
 
     <div class="flex flex-col gap-4">
       <div v-for="(adv, i) in store.adversaries" :key="i" class="flex flex-col lg:flex-row gap-8 items-start">
@@ -42,7 +38,6 @@ const removeAdversary = (i) => {
       </div>
     </div>
 
-  </div>
 </template>
 
 <style scoped></style>
