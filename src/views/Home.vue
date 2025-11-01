@@ -1,7 +1,8 @@
 <template>
   <div
     class="min-h-screen flex flex-col justify-center items-center text-center bg-codex-dark text-white p-8 space-y-6">
-    <img src="@/assets/images/dhlogo.png"></img>
+    <h1 class="max-w-xl leading-relaxed">Welcome to Daggerlab</h1>
+    <img src="@/assets/images/dhlogo.png" contain height="200px" width="200px"></img>
     <p class="max-w-xl text-lg leading-relaxed">
       This product includes materials from the
       <strong>Daggerheart System Reference Document 1.0</strong>, ©
