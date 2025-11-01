@@ -181,6 +181,22 @@ button:focus-visible {
   padding: 2em;
 }
 
+a.text-white {
+  color: #ffffff !important;
+}
+
+.bg-yellow-black-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #fcdc3b 0,
+    #fcdc3b 10px,
+    #000 10px,
+    #000 20px
+  );
+  opacity: 0.7;
+  border-radius: 0.5rem; /* match button radius */
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
