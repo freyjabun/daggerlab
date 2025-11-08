@@ -18,7 +18,7 @@ const printAll = () => {
 
 <template>
 
-    <button @click="printAll" class="button">Print Adversaries</button>
+    <button @click="printAll" class="button mb-2 bg-gradient-to-r from-splendor-dark to-splendor-light">Print Adversaries</button>
 
 
     <div class="flex flex-col gap-4">
