@@ -17,12 +17,14 @@ const printAll = () => {
 </script>
 
 <template>
-<button @click="printAll" class="button">Print Adversaries</button>
+
+    <button @click="printAll" class="button">Print Adversaries</button>
+
 
     <div class="flex flex-col gap-4">
       <div v-for="(adv, i) in store.adversaries" :key="i" class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <div class="w-[450px] flex-shrink-0 print:hidden">
+        <div class="w-l flex-shrink-0 print:hidden">
           <AdversaryForm :adversary="adv"
           @remove="store.removeAdversary(i)"
           :show-remove="i !== 0"
