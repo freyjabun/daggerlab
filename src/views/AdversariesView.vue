@@ -1,45 +1,55 @@
 <script setup>
 import { reactive } from 'vue'
+import { useAdversaryStore } from '@/stores/adversaries'
 import AdversaryCard from '@/components/Adversaries/AdversaryCard.vue'
 import AdversaryForm from '@/components/Adversaries/AdversaryForm.vue'
 import { createEmptyAdversary, createExampleAdversary } from '@/models/adversary'
+
+const store = useAdversaryStore()
 
 const adversaries = reactive([
   createExampleAdversary(),
 ])
 
-const addAdversary = () => {
-  adversaries.push(createEmptyAdversary())
+const printAll = () => {
+  window.open('/printAdversaries', '_blank')
 }
 
-const removeAdversary = (i) => {
-  adversaries.splice(i, 1)
+const clearAllAdversaries = () => {
+  if (confirm('Are you sure you want to remove all adversaries?')) {
+    store.removeAllAdversaries()
+  }
 }
+
 </script>
 
 <template>
-  <div class="print:bg-white print:block">
+  <div class="flex justify-between mb-4">
+    <button @click="printAll" class="button mb-2 bg-gradient-to-r from-splendor-dark to-splendor-light">Print Adversaries</button>
+    <button @click="clearAllAdversaries"
+       class="button mb-2 bg-blade">Clear All</button>
+  </div>
+
 
     <div class="flex flex-col gap-4">
-      <div v-for="(adv, i) in adversaries" :key="i" class="flex flex-col lg:flex-row gap-8 items-start">
+      <div v-for="(adv, i) in store.adversaries" :key="i" class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <div class="w-[450px] flex-shrink-0 print:hidden">
+        <div class="w-l flex-shrink-0 print:hidden">
           <AdversaryForm :adversary="adv"
-          @remove="removeAdversary(i)"
+          @remove="store.removeAdversary(i)"
           :show-remove="i !== 0"
-          @add="addAdversary()"
-          :show-add="i === adversaries.length - 1" 
+          @add="store.addAdversary()"
+          :show-add="i === store.adversaries.length - 1" 
           />
         </div>
 
-        <div class="w-[600px] bg-sitebg p-6 print-card">
+        <div class="w-xl bg-sitebg p-6 print-card">
           <AdversaryCard :adversary="adv" />
         </div>
 
       </div>
     </div>
 
-  </div>
 </template>
 
 <style scoped></style>

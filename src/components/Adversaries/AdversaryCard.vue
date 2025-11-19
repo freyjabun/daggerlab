@@ -4,9 +4,9 @@ defineProps({ adversary: Object })
 
 <template>
   <div
-    class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none print:border-black">
+    class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none">
     <!-- Header -->
-    <div class="bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left">
+    <div class="rounded-t bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left ">
       <h2 class="font-bold">{{ adversary.baseInfo.name}}</h2>
     </div>
 
@@ -62,13 +62,13 @@ defineProps({ adversary: Object })
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">HP:</span>
             <span v-for="i in adversary.stats.hp" :key="'hp' + i"
-              class="inline-block w-4 h-4 border border-gray-600 rounded-full"></span>
+              class="inline-block w-3.5 h-4 border border-gray-700 rounded-full"></span>
           </p>
 
           <p class="flex items-center flex-wrap gap-1">
             <span class="font-semibold">Stress:</span>
             <span v-for="i in adversary.stats.stress" :key="'stress' + i"
-              class="inline-block w-4 h-4 border border-gray-600 rounded-full"></span>
+              class="inline-block w-3.5 h-4 border border-gray-700 rounded-full"></span>
           </p>
         </div>
       </div>
