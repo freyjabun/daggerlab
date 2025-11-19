@@ -24,9 +24,11 @@
   @apply font-bold uppercase text-gray-900 text-lg
 }
 
+.asd {
+  color : rgb(red, green, blue)
+}
 
 @theme {
-  
   /* Default colours */
   --color-daggerpurple: #6c4f9c;
   --color-daggerorange: #ff9e3d;
@@ -38,6 +40,7 @@
   --color-sage: #18653b;
   --color-codex: #25446f;
   --color-splendor: #d0b22f;
+  --color-daggerbackground: #f4f3f1;
   --color-valor: #c3672e;
   
   /* Light colours */
@@ -113,6 +116,10 @@
     width: auto;
     padding: 2rem;
   }
+}
+
+.adversary-card-header {
+  overflow: hidden; /* ensures gradient doesn't spill over */
 }
 
 .input-field {
@@ -217,11 +224,12 @@ a.text-white {
 }
 
 @media print {
+  
   @page {
     margin: 1cm;
     box-shadow: none !important;
     width: 600px !important;
-    overflow-y: auto;
+    overflow: hidden !important;
   }
 
   body {
@@ -233,7 +241,8 @@ a.text-white {
     width: 500px !important;
     height: auto !important;
     padding: 0 !important;
-    overflow-y: auto !important;
     background-color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }

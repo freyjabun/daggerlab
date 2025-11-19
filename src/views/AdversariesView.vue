@@ -14,11 +14,21 @@ const adversaries = reactive([
 const printAll = () => {
   window.open('/printAdversaries', '_blank')
 }
+
+const clearAllAdversaries = () => {
+  if (confirm('Are you sure you want to remove all adversaries?')) {
+    store.removeAllAdversaries()
+  }
+}
+
 </script>
 
 <template>
-
+  <div class="flex justify-between mb-4">
     <button @click="printAll" class="button mb-2 bg-gradient-to-r from-splendor-dark to-splendor-light">Print Adversaries</button>
+    <button @click="clearAllAdversaries"
+       class="button mb-2 bg-blade">Clear All</button>
+  </div>
 
 
     <div class="flex flex-col gap-4">

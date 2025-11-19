@@ -11,6 +11,9 @@ export const useAdversaryStore = defineStore('adversaries', {
     },
     removeAdversary(i) {
       this.adversaries.splice(i, 1)
+    },
+    removeAllAdversaries() {
+      this.adversaries = [createExampleAdversary()]
     }
   },
   persist: true,

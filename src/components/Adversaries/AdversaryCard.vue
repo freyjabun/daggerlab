@@ -4,9 +4,9 @@ defineProps({ adversary: Object })
 
 <template>
   <div
-    class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none print:border-black">
+    class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none">
     <!-- Header -->
-    <div class="bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left">
+    <div class="rounded-t bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left ">
       <h2 class="font-bold">{{ adversary.baseInfo.name}}</h2>
     </div>
 

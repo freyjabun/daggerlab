@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-1 bg-white items-start">
-    <AdversaryCard v-for="(adv, i) in store.adversaries" :key="i" :adversary="adv" />
+  <div class="columns-2 gap-2 bg-white">
+    <AdversaryCard class="break-inside-avoid mb-2 bg-daggerbackground" v-for="(adv, i) in store.adversaries" :key="i" :adversary="adv" />
   </div>
 </template>
