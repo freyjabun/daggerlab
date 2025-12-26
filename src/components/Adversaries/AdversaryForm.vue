@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="bg-daggerpurple-dark p-4 rounded-2xl shadow-md space-y-4 border border-gray-300">
+  <div class="bg-daggerpurple-dark p-4 rounded-2xl shadow-md space-y-4 border border-gray-300 w-full max-w-xl">
     <h2 class="text-2xl font-bold text-white">Adversary Editor</h2>
 
     <BaseInfo v-model="adversary.baseInfo"></BaseInfo>
