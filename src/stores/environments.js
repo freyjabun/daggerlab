@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { createEmptyEnvironment, createExampleEnvironment } from '@models/environment'
+import { createEmptyEnvironment, createExampleEnvironment } from '@/models/environment'
 
 export const useEnvironmentStore = defineStore('environments', {
   state: () => ({
