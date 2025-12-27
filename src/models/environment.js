@@ -4,13 +4,13 @@ export function createEmptyEnvironment(){
             name: '',
             tier: '',
             type: '',
-            description: '',
-            impulses: ''
+            impulses: '',
+            description: ''
 
         },
         stats: {
             difficulty: '',
-            potentialAdversaries: ['']
+            potentialAdversaries: ''
         },
 
         features: [
@@ -25,12 +25,12 @@ export function createExampleEnvironment(){
             name: 'Strong River',
             tier: 1,
             type: 'Traversal',
-            description: 'a river that floooows sooo fast',
-            impulses: 'whatever a river does'
+            impulses: 'whatever a river does',
+            description: 'a river that floooows sooo fast'
         },
         stats: {
             difficulty: 10,
-            potentialAdversaries: ['Lads', 'Dudes']
+            potentialAdversaries: 'Lads, River creatures, all sorts of crazy stuff'
         },
 
         features: [
