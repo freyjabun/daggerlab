@@ -9,7 +9,6 @@ export function createEmptyAdversary() {
     experience: ''
     },
     stats: {
-      tier: '',
       hp: '',
       stress: '',
       difficulty: '',
