@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { createEmptyEnvironment, createExampleEnvironment } from '@/models/environment'
 
+
 export const useEnvironmentStore = defineStore('environments', {
   state: () => ({
     environments: [createExampleEnvironment()]
@@ -9,7 +10,7 @@ export const useEnvironmentStore = defineStore('environments', {
     addEnvironment(){
         this.environments.push(createEmptyEnvironment())
     },
-    removeEnvironment(){
+    removeEnvironment(i){
         this.environments.splice(i, 1)
     },
     removeAllEnvironments(){
