@@ -21,7 +21,11 @@
 }
 
 .card-header{
-  @apply font-bold uppercase text-gray-900 text-lg
+  @apply font-semibold uppercase text-gray-900 text-lg
+}
+
+.card-title{
+  @apply font-bold uppercase text-gray-900 text-2xl
 }
 
 .asd {

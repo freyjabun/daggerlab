@@ -5,12 +5,12 @@ defineProps({ environment: Object })
 <template>
   <div class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none">
     <!-- Header -->
-    <div class="rounded-t bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left ">
+    <div class="card-title px-2 py-1 text-left">
       <h2 class="font-bold">{{ environment.baseInfo.name }}</h2>
     </div>
 
     <!-- Body -->
-    <div class="p-2 text-sm leading-relaxed">
+    <div class="px-2 pb-2 text-sm leading-relaxed">
       <p class="font-bold text-left">Tier {{ environment.baseInfo.tier }} {{ environment.baseInfo.type }}</p>
 
       <p class="text-left">

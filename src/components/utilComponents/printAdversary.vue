@@ -12,6 +12,6 @@ onMounted(() => {
 
 <template>
   <div class="columns-2 gap-2 bg-white">
-    <AdversaryCard class="break-inside-avoid mb-2 bg-daggerbackground" v-for="(adv, i) in store.adversaries" :key="i" :adversary="adv" />
+    <AdversaryCard class="break-inside-avoid mb-2 bg-daggersand" v-for="(adv, i) in store.adversaries" :key="i" :adversary="adv" />
   </div>
 </template>

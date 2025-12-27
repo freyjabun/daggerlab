@@ -6,12 +6,12 @@ defineProps({ adversary: Object })
   <div
     class="border border-gray-400 rounded shadow-sm text-gray-800 print:shadow-none">
     <!-- Header -->
-    <div class="rounded-t bg-gradient-to-r from-bone to-bone-dark text-gray-800 px-2 py-1 text-left ">
+    <div class="card-title px-2 py-1 text-left">
       <h2 class="font-bold">{{ adversary.baseInfo.name}}</h2>
     </div>
 
     <!-- Body -->
-    <div class="p-2 text-sm leading-relaxed">
+    <div class="px-2 pb-2 text-sm leading-relaxed">
       <!-- Tier + Type -->
       <p class="font-bold text-left">
         Tier {{ adversary.baseInfo.tier}} {{ adversary.baseInfo.type}}
@@ -19,7 +19,7 @@ defineProps({ adversary: Object })
 
       <!-- Description -->
       <p class="text-left">
-        <span class="italic ml-1"> {{ adversary.baseInfo.description }}</span>
+        <span class="italic"> {{ adversary.baseInfo.description }}</span>
       </p>
 
       <!-- Motives & Tactics -->
