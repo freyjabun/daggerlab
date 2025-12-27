@@ -22,7 +22,7 @@ defineProps({ environment: Object })
         <span class="italic ml-1">{{ environment.baseInfo.impulses }}</span>
       </div>
 
-      <div class="bg-daggerbackground pl-2 pr-2 border-t-2 border-b-2 border-gray-500 pt-2 pb-1">
+      <div class="bg-white pl-2 pr-2 border-t-2 border-b-2 border-gray-500 pt-2 pb-1">
         <div class="text-left" >
           <span class="font-bold">Difficulty:</span>
           <span class="ml-1">{{ environment.stats.difficulty }}</span>
