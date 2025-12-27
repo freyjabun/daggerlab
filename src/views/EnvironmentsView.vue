@@ -29,7 +29,7 @@ const clearAllEnvironments = () => {
         @remove="store.removeEnvironment(i)"
         :show-remove="i !== 0"
         @add="store.addEnvironment()"
-        :show-add="i === store.adversaries.length - 1"
+        :show-add="i === store.environments.length - 1"
         />
       </div>
       
@@ -40,4 +40,6 @@ const clearAllEnvironments = () => {
     </div>
   </div>
 </template>
+
+<style scoped></style>
 
