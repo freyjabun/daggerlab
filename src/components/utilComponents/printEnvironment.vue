@@ -3,8 +3,7 @@ import { useEnvironmentStore } from '@/stores/environments'
 import EnvironmentCard from '../Environments/EnvironmentCard.vue'
 import { onMounted } from 'vue'
 
-
-const store = useEnvironmentStore
+const store = useEnvironmentStore()
 
 onMounted(() => {
   setTimeout(() => window.print(), 500)
