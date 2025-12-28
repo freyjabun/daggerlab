@@ -21,7 +21,11 @@
 }
 
 .card-header{
-  @apply font-bold uppercase text-gray-900 text-lg
+  @apply font-semibold uppercase text-gray-900 text-lg
+}
+
+.card-title{
+  @apply font-bold uppercase text-gray-900 text-2xl
 }
 
 .asd {
@@ -42,6 +46,7 @@
   --color-splendor: #d0b22f;
   --color-daggerbackground: #f4f3f1;
   --color-valor: #c3672e;
+  --color-daggersand: #f4eee2;
   
   /* Light colours */
   --color-daggerpurple-light: #8a6ebf;

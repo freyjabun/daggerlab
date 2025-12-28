@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia'
 import { createExampleAdversary, createEmptyAdversary } from '@/models/adversary'
 
+
 export const useAdversaryStore = defineStore('adversaries', {
   state: () => ({
-    adversaries: [ createExampleAdversary() ]
+    adversaries: [createExampleAdversary()]
   }),
   actions: {
     addAdversary() {
@@ -18,3 +19,5 @@ export const useAdversaryStore = defineStore('adversaries', {
   },
   persist: true,
 })
+
+
