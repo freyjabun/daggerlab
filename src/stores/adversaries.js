@@ -4,7 +4,7 @@ import { createExampleAdversary, createEmptyAdversary } from '@/models/adversary
 
 export const useAdversaryStore = defineStore('adversaries', {
   state: () => ({
-    adversaries: [ createExampleAdversary() ]
+    adversaries: [createExampleAdversary()]
   }),
   actions: {
     addAdversary() {

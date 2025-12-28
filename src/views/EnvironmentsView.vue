@@ -3,16 +3,17 @@ import { reactive } from 'vue'
 import { useEnvironmentStore } from '@/stores/environments'
 import EnvironmentCard from '@/components/Environments/EnvironmentCard.vue'
 import EnvironmentForm from '@/components/Environments/EnvironmentForm.vue'
-import { createExampleEnvironment } from '../models/environment'
 
 const store = useEnvironmentStore()
-
-const environments = reactive([createExampleEnvironment(),])
 
 const clearAllEnvironments = () => {
     if (confirm('Are you sure you want to remove all environments?')) {
     store.removeAllEnvironments()
 }}
+
+const printAll = () => {
+  window.open('/printEnvironments', '_blank')
+}
 
 </script>
 <template>

@@ -7,14 +7,14 @@ export const useEnvironmentStore = defineStore('environments', {
     environments: [createExampleEnvironment()]
   }),
   actions: {
-    addEnvironment(){
-        this.environments.push(createEmptyEnvironment())
+    addEnvironment() {
+      this.environments.push(createEmptyEnvironment())
     },
-    removeEnvironment(i){
-        this.environments.splice(i, 1)
+    removeEnvironment(i) {
+      this.environments.splice(i, 1)
     },
-    removeAllEnvironments(){
-        this.environments = [createExampleEnvironment()]
+    removeAllEnvironments() {
+      this.environments = [createExampleEnvironment()]
     }
   },
   persist: true,

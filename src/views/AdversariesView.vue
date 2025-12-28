@@ -3,13 +3,8 @@ import { reactive } from 'vue'
 import { useAdversaryStore } from '@/stores/adversaries'
 import AdversaryCard from '@/components/Adversaries/AdversaryCard.vue'
 import AdversaryForm from '@/components/Adversaries/AdversaryForm.vue'
-import { createEmptyAdversary, createExampleAdversary } from '@/models/adversary'
 
 const store = useAdversaryStore()
-
-const adversaries = reactive([
-  createExampleAdversary(),
-])
 
 const printAll = () => {
   window.open('/printAdversaries', '_blank')
