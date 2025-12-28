@@ -18,7 +18,7 @@ const printAll = () => {
 </script>
 <template>
   <div class="flex justify-between mb-4">
-    <button @click="printAll" class="button mb-2 bg-gradient-to-r from-splendor-dark to-splendor-light">Print Environments Except It Doesn't Work</button>
+    <button @click="printAll" class="button mb-2 bg-gradient-to-r from-splendor-dark to-splendor-light">Print Environments</button>
     <button @click="clearAllEnvironments"
        class="button mb-2 bg-blade">Clear All</button>
   </div>

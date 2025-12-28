@@ -32,11 +32,6 @@
     >
       Create Environments
     </RouterLink>
-
-    <!-- UNDER CONSTRUCTION -->
-    <div class="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
-      <div class="w-full h-full bg-yellow-black-stripes rotate-12"></div>
-    </div>
   </div>
 </div>
 
