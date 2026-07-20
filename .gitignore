@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Claude Code sandbox — local auth/config, don't commit
+.ai/*
