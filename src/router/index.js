@@ -1,16 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import AdversariesView from '../views/AdversariesView.vue'
-import EnvironmentsView from '../views/EnvironmentsView.vue'
-import PrintAdversary from '../components/utilComponents/printAdversary.vue'
-import PrintEnvironment from '../components/utilComponents/printEnvironment.vue'
+import Home from '@/views/Home.vue'
+import EntityView from '@/shared/EntityView.vue'
+import PrintPage from '@/shared/PrintPage.vue'
+import { features } from '@/features/registry'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
-  { path: '/adversaries', name: 'Adversaries', component: AdversariesView },
-  { path: '/environments', name: 'Environments', component: EnvironmentsView },
-  { path: '/printAdversaries', name: 'PrintAdversaries', component: PrintAdversary},
-  { path: '/printEnvironments', name: 'PrintEnvironments', component: PrintEnvironment}
+  ...features.flatMap((feature) => [
+    {
+      path: feature.path,
+      name: feature.label,
+      component: EntityView,
+      props: { feature },
+    },
+    {
+      path: feature.printPath,
+      name: `Print${feature.label}`,
+      component: PrintPage,
+      props: { feature },
+    },
+  ]),
 ]
 
 const router = createRouter({

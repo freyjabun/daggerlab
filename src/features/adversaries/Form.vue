@@ -1,14 +1,14 @@
 <script setup>
 import Stats from './Stats.vue';
 import WeaponEditor from './WeaponEditor.vue';
-import FeaturesEditor from './FeaturesEditor.vue';
-import Collapsible from '../utilComponents/Collapsible.vue';
+import FeaturesEditor from '@/shared/FeaturesEditor.vue';
+import Collapsible from '@/shared/Collapsible.vue';
 import BaseInfo from './BaseInfo.vue';
 
 
 const emit = defineEmits(['remove', 'add'])
 defineProps({
-  adversary: Object,
+  item: Object,
   showAdd: Boolean,
   showRemove: Boolean
 })
@@ -18,22 +18,22 @@ defineProps({
   <div class="bg-daggerpurple-dark p-4 rounded-2xl shadow-md space-y-4 border border-gray-300 w-full max-w-xl">
     <h2 class="text-2xl font-bold text-white">Adversary Editor</h2>
 
-    <BaseInfo v-model="adversary.baseInfo"></BaseInfo>
+    <BaseInfo v-model="item.baseInfo"></BaseInfo>
     <!-- Stats -->
     <Collapsible title="Stats">
-      <Stats v-model="adversary.stats" />
+      <Stats v-model="item.stats" />
     </Collapsible>
 
 
     <!-- Weapon -->
     <Collapsible title="Weapon">
-      <WeaponEditor v-model="adversary.weapon" />
+      <WeaponEditor v-model="item.weapon" />
     </Collapsible>
 
 
     <!-- Features -->
     <Collapsible title="Features">
-      <FeaturesEditor v-model="adversary.features"></FeaturesEditor>
+      <FeaturesEditor v-model="item.features"></FeaturesEditor>
     </Collapsible>
 
   </div>

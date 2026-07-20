@@ -1,3 +1,8 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+import { features } from '@/features/registry'
+</script>
+
 <template>
   <div
     class="min-h-screen flex flex-col justify-center items-center text-center bg-codex-dark text-white p-8 space-y-6">
@@ -15,25 +20,15 @@
       There are no previous modifications by others.
     </p>
 
-<div class="flex gap-4 mt-6">
-  <!-- Adversaries button -->
-  <RouterLink
-    to="/adversaries"
-    class="px-6 py-3 bg-daggerpurple hover:bg-daggerpurple-dark rounded-lg text-white font-semibold transition"
-    >
-    Create Adversaries
-  </RouterLink>
-
-  <!-- Environments button -->
-  <div class="relative inline-block">
-    <RouterLink
-      to="/environments"
-      class="px-6 py-3 bg-gray-600 rounded-lg text-white font-semibold transition inline-block"
-    >
-      Create Environments
-    </RouterLink>
-  </div>
-</div>
-
+    <div class="flex gap-4 mt-6">
+      <RouterLink
+        v-for="feature in features"
+        :key="feature.key"
+        :to="feature.path"
+        class="px-6 py-3 bg-daggerpurple hover:bg-daggerpurple-dark rounded-lg text-white font-semibold transition"
+      >
+        {{ feature.home }}
+      </RouterLink>
+    </div>
   </div>
 </template>
